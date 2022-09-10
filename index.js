@@ -1,9 +1,11 @@
 const logger = require('./lib/helpers/logger');
 const server = require('./lib/server');
+const workers = require('./lib/workers');
 
 const app = {
   start: () => {
     server.start();
+    workers.start();
   },
 };
 
