@@ -6,10 +6,18 @@ const environments = {
     httpsPort: 3001,
     hashingSecret: 'UPTM_DEV_SECRET',
     maxChecks: 5,
+    workers: {
+      logging: {
+        intervalMilliseconds: 1000 * 60 * 60 * 24,
+      }, 
+      check: {
+        intervalMilliseconds: 1000 * 60,
+      },
+    },  
     twilio: {
-      accountSid: '<YOUR ACCOUNT SID>',
-      authToken: '<YOUR AUTH TOKEN>',
-      fromPhone: '<YOUR GENERATED PHONE>',
+      accountSid: 'AC60e9aeb05f7d80d0e120978672066303',
+      authToken: '1f9bdc16b5f5f3ef30c02e0f09b8d1a7',
+      fromPhone: '+12054798560',
     },
   },
   production: {

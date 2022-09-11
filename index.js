@@ -1,6 +1,8 @@
-const logger = require('./lib/helpers/logger');
+const getLogger = require('./lib/helpers/_logger');
 const server = require('./lib/server');
-const workers = require('./lib/workers');
+const workers = require('./lib/core/workers');
+
+const _logger = getLogger();
 
 const app = {
   start: () => {
@@ -12,7 +14,7 @@ const app = {
 app.start();
 
 process.on('SIGINT', () => {
-  logger.info('Shutting down (CTRL-C)');
+  _logger.info('Shutting down (CTRL-C)');
   process.exit();
 });
 
@@ -21,7 +23,7 @@ process.on('SIGINT', () => {
   'unhandledRejection'
 ].forEach((eventName) => {
   process.on(eventName, (err) => {
-    logger.error('Error: ', err);
+    _logger.error('Error: ', err);
   });
 }));
 

@@ -1,2 +1,6 @@
 .data
-https/*.pem
+.logs
+
+config/https/*.pem
+
+package-lock.json
