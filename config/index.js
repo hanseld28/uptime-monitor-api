@@ -15,9 +15,9 @@ const environments = {
       },
     },  
     twilio: {
-      accountSid: 'AC60e9aeb05f7d80d0e120978672066303',
-      authToken: '1f9bdc16b5f5f3ef30c02e0f09b8d1a7',
-      fromPhone: '+12054798560',
+      accountSid: '<YOUR ACCOUNT SID>',
+      authToken: '<YOUR AUTH TOKEN>',
+      fromPhone: '<YOUR GENERATED PHONE>',
     },
   },
   production: {
